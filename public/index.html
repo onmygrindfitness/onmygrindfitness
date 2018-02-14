@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="favicon.png">
+	<title>Own My Fitness VR App</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">	
+	<script src='/static/js/aframe.min.js' ></script>
+</head>
+<body>
+
+<div class="container" id="container">
+  <div class="info">
+  	<img id="info" src="/static/images/splash.png" />
+	<!-- <video id="info" src="/static/video.mp4" autoplay loop></video> -->
+	<a class="button" id="start_experience" href="#">Start experience</a>
+  </div>
+</div>
+
+<a-scene>
+	<a-assets>
+		<img id="splash" src="/static/images/splash.png">
+		<img id="sky" src="/static/images/sky.jpg"> 
+		<audio id = "song"  src="/static/audio.mp3" loop preload=”none”></audio>
+	</a-assets>
+	
+	<a-entity mobile></a-entity>
+	<a-entity light="type: directional; color: #FFF; intensity: 1" position="2 20 0"></a-entity>
+	<a-camera id="maincamera" position="0 1 0" universal-controls wasd-controls="disabled">
+		<a-cursor  id="cursor" color="red" >
+			<a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+			<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+		</a-cursor>
+		<a-entity light="color:#BBB;type:ambient;target:null"></a-entity>
+	</a-camera>
+
+
+	<a-circle id="image1" position="0 1 9" rotation="0 -180 0"  material="shader:flat; side:double;" src="/static/images/image1"></a-circle>
+	<a-circle id="image2" position="4 1 8" rotation="0 -150 0"  material="shader:flat; side:double;" src="/static/images/image2"></a-circle>
+	<a-circle id="image3" position="8 1 4" rotation="0 -120 0"  material="shader:flat; side:double;" src="/static/images/image3"></a-circle>
+	<a-circle id="image4" position="9 1 0" rotation="0 -90 0"   material="shader:flat; side:double;" src="/static/images/image4"></a-circle>
+	<a-circle id="image5" position="8 1 -4" rotation="0 -60 0"  material="shader:flat; side:double;" src="/static/images/image5"></a-circle>
+	<a-circle id="image6" position="4 1 -8" rotation="0 -30 0"  material="shader:flat; side:double;" src="/static/images/image6"></a-circle>
+	<a-circle id="image7" position="0 1 -9" rotation="0 0 0"    material="shader:flat; side:double;" src="/static/images/image7"></a-circle>
+	<a-circle id="image8" position="-4 1 -8" rotation="0 30 0"  material="shader:flat; side:double;" src="/static/images/image8"></a-circle>
+	<a-circle id="image9" position="-8 1 -4" rotation="0 60 0"  material="shader:flat; side:double;" src="/static/images/image9"></a-circle>
+	<a-circle id="image10" position="-9 1 0" rotation="0 90 0"  material="shader:flat; side:double;" src="/static/images/image10"></a-circle>
+	<a-circle id="image11" position="-8 1 4" rotation="0 120 0" material="shader:flat; side:double;" src="/static/images/image11"></a-circle>
+	<a-circle id="image12" position="-4 1 8" rotation="0 150 0" material="shader:flat; side:double;" src="/static/images/image12"></a-circle>
+
+	<a-circle id="image13" position="-2 3 9" rotation="0 165 0"  material="shader:flat; side:double;" src="/static/images/image13"></a-circle>
+	<a-circle id="image14" position="2 3 9" rotation="0 -165 0"  material="shader:flat; side:double;" src="/static/images/image14"></a-circle>
+	<a-circle id="image15" position="6 3 6" rotation="0 -135 0"  material="shader:flat; side:double;" src="/static/images/image15"></a-circle>
+	<a-circle id="image16" position="9 3 2" rotation="0 -105 0"  material="shader:flat; side:double;" src="/static/images/image16"></a-circle>
+	<a-circle id="image17" position="9 3 -2" rotation="0 -75 0"  material="shader:flat; side:double;" src="/static/images/image17"></a-circle>
+	<a-circle id="image18" position="6 3 -6" rotation="0 -45 0"  material="shader:flat; side:double;" src="/static/images/image18"></a-circle>
+	<a-circle id="image19" position="2 3 -9" rotation="0 -15 0"  material="shader:flat; side:double;" src="/static/images/image19"></a-circle>
+	<a-circle id="image20" position="-2 3 -9" rotation="0 15 0"  material="shader:flat; side:double;" src="/static/images/image20"></a-circle>
+	<a-circle id="image21" position="-6 3 -6" rotation="0 45 0"  material="shader:flat; side:double;" src="/static/images/image21"></a-circle>
+	<a-circle id="image22" position="-9 3 -2" rotation="0 75 0"  material="shader:flat; side:double;" src="/static/images/image22"></a-circle>
+	<a-circle id="image23" position="-9 3 2" rotation="0 105 0"  material="shader:flat; side:double;" src="/static/images/image23"></a-circle>
+	<a-circle id="image24" position="-6 3 6" rotation="0 135 0"  material="shader:flat; side:double;" src="/static/images/image24"></a-circle>
+
+	<a-circle id="image25" position="0 5 9" rotation="0 -180 0"  material="shader:flat; side:double;" src="/static/images/image25"></a-circle>
+	<a-circle id="image26" position="4 5 8" rotation="0 -150 0"  material="shader:flat; side:double;" src="/static/images/image26"></a-circle>
+	<a-circle id="image27" position="8 5 4" rotation="0 -120 0"  material="shader:flat; side:double;" src="/static/images/image27"></a-circle>
+	<a-circle id="image28" position="9 5 0" rotation="0 -90 0"   material="shader:flat; side:double;" src="/static/images/image28"></a-circle>
+	<a-circle id="image29" position="8 5 -4" rotation="0 -60 0"  material="shader:flat; side:double;" src="/static/images/image29"></a-circle>
+	<a-circle id="image30" position="4 5 -8" rotation="0 -30 0"  material="shader:flat; side:double;" src="/static/images/image30"></a-circle>
+	<a-circle id="image31" position="0 5 -9" rotation="0 0 0"    material="shader:flat; side:double;" src="/static/images/image31"></a-circle>
+	<a-circle id="image32" position="-4 5 -8" rotation="0 30 0"  material="shader:flat; side:double;" src="/static/images/image32"></a-circle>
+	<a-circle id="image33" position="-8 5 -4" rotation="0 60 0"  material="shader:flat; side:double;" src="/static/images/image33"></a-circle>
+	<a-circle id="image34" position="-9 5 0" rotation="0 90 0"   material="shader:flat; side:double;" src="/static/images/image34"></a-circle>
+	<a-circle id="image35" position="-8 5 4" rotation="0 120 0"  material="shader:flat; side:double;" src="/static/images/image35"></a-circle>
+	<a-circle id="image36" position="-4 5 8" rotation="0 150 0"  material="shader:flat; side:double;" src="/static/images/image36"></a-circle>
+
+	<a-sky src="#sky"></a-sky>
+	<a-circle rotation="-90 0 0" radius="4.0" side="double" shader="flat" src="#splash"></a-circle>
+
+ </a-scene>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+var startExperienteBtn = document.getElementById('start_experience');
+
+startExperienteBtn.onclick = function(){
+	document.getElementById('container').outerHTML = '';
+	document.getElementsByTagName('a-scene')[0].style.opacity = 1;
+	document.getElementsByTagName('a-scene')[0].style.zIndex = 'auto';
+	document.getElementById('song').play()
+};
+
+function open_url(url) {
+	window.open(url);
+}
+
+window.onload = function() {
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyAod_tSMbGW8dk43DfEjE_ob-4028FMRoA",
+		authDomain: "onmygrindfitness-d528f.firebaseapp.com",
+		databaseURL: "https://onmygrindfitness-d528f.firebaseio.com",
+		projectId: "onmygrindfitness-d528f",
+		storageBucket: "onmygrindfitness-d528f.appspot.com",
+	};
+	firebase.initializeApp(config);
+	window.dbref = firebase.database().ref('sitecontent/');
+	window.storage = firebase.storage().ref('sitecontent/');
+	
+	window.storage.child('image1').getDownloadURL().then( function(s) { document.getElementById('image1').setAttribute('src', s); });
+	window.storage.child('image2').getDownloadURL().then( function(s) { document.getElementById('image2').setAttribute('src', s); });
+	window.storage.child('image3').getDownloadURL().then( function(s) { document.getElementById('image3').setAttribute('src', s); });
+	window.storage.child('image4').getDownloadURL().then( function(s) { document.getElementById('image4').setAttribute('src', s); });
+	window.storage.child('image5').getDownloadURL().then( function(s) { document.getElementById('image5').setAttribute('src', s); });
+	window.storage.child('image6').getDownloadURL().then( function(s) { document.getElementById('image6').setAttribute('src', s); });
+	window.storage.child('image7').getDownloadURL().then( function(s) { document.getElementById('image7').setAttribute('src', s); });
+	window.storage.child('image8').getDownloadURL().then( function(s) { document.getElementById('image8').setAttribute('src', s); });
+	window.storage.child('image9').getDownloadURL().then( function(s) { document.getElementById('image9').setAttribute('src', s); });
+	window.storage.child('image10').getDownloadURL().then( function(s) { document.getElementById('image10').setAttribute('src', s); });
+	window.storage.child('image11').getDownloadURL().then( function(s) { document.getElementById('image11').setAttribute('src', s); });
+	window.storage.child('image12').getDownloadURL().then( function(s) { document.getElementById('image12').setAttribute('src', s); });
+	window.storage.child('image13').getDownloadURL().then( function(s) { document.getElementById('image13').setAttribute('src', s); });
+	window.storage.child('image14').getDownloadURL().then( function(s) { document.getElementById('image14').setAttribute('src', s); });
+	window.storage.child('image15').getDownloadURL().then( function(s) { document.getElementById('image15').setAttribute('src', s); });
+	window.storage.child('image16').getDownloadURL().then( function(s) { document.getElementById('image16').setAttribute('src', s); });
+	window.storage.child('image17').getDownloadURL().then( function(s) { document.getElementById('image17').setAttribute('src', s); });
+	window.storage.child('image18').getDownloadURL().then( function(s) { document.getElementById('image18').setAttribute('src', s); });
+	window.storage.child('image19').getDownloadURL().then( function(s) { document.getElementById('image19').setAttribute('src', s); });
+	window.storage.child('image20').getDownloadURL().then( function(s) { document.getElementById('image20').setAttribute('src', s); });
+	window.storage.child('image21').getDownloadURL().then( function(s) { document.getElementById('image21').setAttribute('src', s); });
+	window.storage.child('image22').getDownloadURL().then( function(s) { document.getElementById('image22').setAttribute('src', s); });
+	window.storage.child('image23').getDownloadURL().then( function(s) { document.getElementById('image23').setAttribute('src', s); });
+	window.storage.child('image24').getDownloadURL().then( function(s) { document.getElementById('image24').setAttribute('src', s); });
+	window.storage.child('image25').getDownloadURL().then( function(s) { document.getElementById('image25').setAttribute('src', s); });
+	window.storage.child('image26').getDownloadURL().then( function(s) { document.getElementById('image26').setAttribute('src', s); });
+	window.storage.child('image27').getDownloadURL().then( function(s) { document.getElementById('image27').setAttribute('src', s); });
+	window.storage.child('image28').getDownloadURL().then( function(s) { document.getElementById('image28').setAttribute('src', s); });
+	window.storage.child('image29').getDownloadURL().then( function(s) { document.getElementById('image29').setAttribute('src', s); });
+	window.storage.child('image30').getDownloadURL().then( function(s) { document.getElementById('image30').setAttribute('src', s); });
+	window.storage.child('image31').getDownloadURL().then( function(s) { document.getElementById('image31').setAttribute('src', s); });
+	window.storage.child('image32').getDownloadURL().then( function(s) { document.getElementById('image32').setAttribute('src', s); });
+	window.storage.child('image33').getDownloadURL().then( function(s) { document.getElementById('image33').setAttribute('src', s); });
+	window.storage.child('image34').getDownloadURL().then( function(s) { document.getElementById('image34').setAttribute('src', s); });
+	window.storage.child('image35').getDownloadURL().then( function(s) { document.getElementById('image35').setAttribute('src', s); });
+	window.storage.child('image36').getDownloadURL().then( function(s) { document.getElementById('image36').setAttribute('src', s); });
+	window.dbref.child('image1/url').once('value').then( function(s) { document.getElementById('image1').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image2/url').once('value').then( function(s) { document.getElementById('image2').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image3/url').once('value').then( function(s) { document.getElementById('image3').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image4/url').once('value').then( function(s) { document.getElementById('image4').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image5/url').once('value').then( function(s) { document.getElementById('image5').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image6/url').once('value').then( function(s) { document.getElementById('image6').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image7/url').once('value').then( function(s) { document.getElementById('image7').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image8/url').once('value').then( function(s) { document.getElementById('image8').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image9/url').once('value').then( function(s) { document.getElementById('image9').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image10/url').once('value').then( function(s) { document.getElementById('image10').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image11/url').once('value').then( function(s) { document.getElementById('image11').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image12/url').once('value').then( function(s) { document.getElementById('image12').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image13/url').once('value').then( function(s) { document.getElementById('image13').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image14/url').once('value').then( function(s) { document.getElementById('image14').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image15/url').once('value').then( function(s) { document.getElementById('image15').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image16/url').once('value').then( function(s) { document.getElementById('image16').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image17/url').once('value').then( function(s) { document.getElementById('image17').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image18/url').once('value').then( function(s) { document.getElementById('image18').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image19/url').once('value').then( function(s) { document.getElementById('image19').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image20/url').once('value').then( function(s) { document.getElementById('image20').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image21/url').once('value').then( function(s) { document.getElementById('image21').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image22/url').once('value').then( function(s) { document.getElementById('image22').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image23/url').once('value').then( function(s) { document.getElementById('image23').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image24/url').once('value').then( function(s) { document.getElementById('image24').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image25/url').once('value').then( function(s) { document.getElementById('image25').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image26/url').once('value').then( function(s) { document.getElementById('image26').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image27/url').once('value').then( function(s) { document.getElementById('image27').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image28/url').once('value').then( function(s) { document.getElementById('image28').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image29/url').once('value').then( function(s) { document.getElementById('image29').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image30/url').once('value').then( function(s) { document.getElementById('image30').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image31/url').once('value').then( function(s) { document.getElementById('image31').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image32/url').once('value').then( function(s) { document.getElementById('image32').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image33/url').once('value').then( function(s) { document.getElementById('image33').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image34/url').once('value').then( function(s) { document.getElementById('image34').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image35/url').once('value').then( function(s) { document.getElementById('image35').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+	window.dbref.child('image36/url').once('value').then( function(s) { document.getElementById('image36').setAttribute('onclick' , 'open_url("' + s.val() + '")');});
+};
+</script>
+</body>
+</html>
