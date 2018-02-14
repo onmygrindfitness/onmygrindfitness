@@ -1,0 +1,11 @@
+### Firebase ###
+
+.idea
+**/node_modules/*
+**/.firebaserc
+
+
+## Client Details
+*.md
+*.pdf
+content
